@@ -3,10 +3,8 @@ import { ProtectedRoute } from './components/ProtectedRoute'
 import { NavBar } from './components/NavBar'
 import { LoginPage } from './pages/LoginPage'
 import { RegisterPage } from './pages/RegisterPage'
-
-function PlaceholderRooms() {
-  return <main style={{ padding: 'var(--space-lg)' }}>Rooms coming soon</main>
-}
+import { RoomsPage } from './pages/RoomsPage'
+import { RoomPage } from './pages/RoomPage'
 
 function App() {
   return (
@@ -20,7 +18,7 @@ function App() {
           path="/rooms"
           element={
             <ProtectedRoute>
-              <PlaceholderRooms />
+              <RoomsPage />
             </ProtectedRoute>
           }
         />
@@ -28,7 +26,7 @@ function App() {
           path="/rooms/:id"
           element={
             <ProtectedRoute>
-              <PlaceholderRooms />
+              <RoomPage />
             </ProtectedRoute>
           }
         />

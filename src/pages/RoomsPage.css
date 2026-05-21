@@ -1,0 +1,23 @@
+.rooms-page {
+  padding: var(--space-lg);
+  background-color: var(--color-surface);
+  min-height: 100vh;
+}
+
+.rooms-page__title {
+  font-family: var(--font-heading);
+  font-size: var(--font-size-heading);
+  font-weight: var(--font-weight-heading);
+  line-height: var(--line-height-heading);
+  color: var(--color-on-surface);
+  margin: 0 0 var(--space-lg);
+}
+
+.rooms-page__list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-sm);
+}

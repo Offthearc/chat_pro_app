@@ -25,7 +25,7 @@
     {
       "id": "FCHAT",
       "name": "Article-Linked Chat Rooms",
-      "status": "pending",
+      "status": "done",
       "description": "A list of chat rooms, each linked to an AI article (title + URL). Users browse rooms, open one, and post/read messages. Messages are persisted in localStorage per room.",
       "acceptance": [
         "Rooms list page shows room name + linked article title",

@@ -27,7 +27,7 @@
 1. **`src/api/auth.ts` lines 3-4**: Rename localStorage keys to match the architecture spec:
    - `chat_pro_users` → `chat_pro_app:users`
    - `chat_pro_current_user` → `chat_pro_app:currentUser`
-   Update the test file `tests/auth.test.tsx` accordingly if it asserts on raw key names (it does not currently, so only the API file needs changing).
+     Update the test file `tests/auth.test.tsx` accordingly if it asserts on raw key names (it does not currently, so only the API file needs changing).
 
 2. **`src/components/AuthGuard.tsx`**: Rename the file to `ProtectedRoute.tsx` and the exported component to `ProtectedRoute`. Update all import sites (`src/App.tsx` line 2 imports `AuthGuard`, tests import `AuthGuard` indirectly via App). The architecture doc specifies this exact name.
 

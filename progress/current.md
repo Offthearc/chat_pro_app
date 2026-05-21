@@ -1,11 +1,10 @@
-Feature in progress: FAUTH — User Registration & Auth
+Feature in progress: FCHAT — Article-Linked Chat Rooms
 
 Plan:
 
-- Create shared types in src/types/index.ts (User, ChatRoom, Message, DMThread, DMMessage)
-- Create auth service in src/api/auth.ts using localStorage
-- Create React context in src/context/AuthContext.tsx
-- Create AuthGuard component and NavBar component
-- Create RegisterPage and LoginPage with accessible forms
-- Install react-router-dom and wire routing in main.tsx / App.tsx
-- Write tests in tests/auth.test.tsx covering register, login, logout, persistence
+- Create src/api/rooms.ts with getRooms, getRoom, getMessages, postMessage and seed data
+- Create src/hooks/useRooms.ts and src/hooks/useRoom.ts
+- Create src/components/RoomCard.tsx, MessageList.tsx, MessageInput.tsx
+- Create src/pages/RoomsPage.tsx and src/pages/RoomPage.tsx
+- Update src/App.tsx to use real RoomsPage and RoomPage components
+- Write tests/rooms.test.tsx covering all acceptance criteria

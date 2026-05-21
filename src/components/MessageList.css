@@ -1,0 +1,55 @@
+.message-list {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-sm);
+  padding: var(--space-md);
+  overflow-y: auto;
+  flex: 1;
+}
+
+.message-list__item {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-xs);
+  max-width: 70%;
+}
+
+.message-list__item--sent {
+  align-self: flex-end;
+  align-items: flex-end;
+}
+
+.message-list__item--received {
+  align-self: flex-start;
+  align-items: flex-start;
+}
+
+.message-list__author {
+  font-family: var(--font-sans);
+  font-size: var(--font-size-sans);
+  color: var(--color-on-surface-variant);
+  font-weight: 600;
+}
+
+.message-list__bubble {
+  font-family: var(--font-sans);
+  font-size: var(--font-size-sans);
+  padding: var(--space-sm) var(--space-md);
+  border-radius: var(--rounded-lg);
+}
+
+.message-list__item--sent .message-list__bubble {
+  background-color: var(--color-chat-sent);
+  color: var(--color-on-chat-sent);
+}
+
+.message-list__item--received .message-list__bubble {
+  background-color: var(--color-chat-received);
+  color: var(--color-on-chat-received);
+}
+
+.message-list__time {
+  font-family: var(--font-sans);
+  font-size: var(--font-size-mono);
+  color: var(--color-on-surface-variant);
+}

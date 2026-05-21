@@ -15,16 +15,20 @@
 ## Verification Output
 
 ### npm run typecheck
+
 Exit 0, no errors.
 
 ### npm run lint
+
 Exit 0, 0 errors (1 pre-existing warning in AuthContext.tsx about react-refresh — not introduced by these changes).
 
 ### npx vitest run
-Test Files  2 passed (2)
-Tests       21 passed (21)
+
+Test Files 2 passed (2)
+Tests 21 passed (21)
 
 ### ./init.sh
+
 All 6 steps passed. "Environment ready."
 
 ## Decisions

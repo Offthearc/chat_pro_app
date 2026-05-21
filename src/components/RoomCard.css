@@ -1,0 +1,28 @@
+.room-card {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-xs);
+  background-color: var(--color-surface-variant);
+  color: var(--color-on-surface);
+  border-radius: var(--rounded-md);
+  padding: var(--space-md);
+  text-decoration: none;
+  transition: background-color 0.15s ease;
+}
+
+.room-card:hover {
+  background-color: var(--color-surface-elevated);
+}
+
+.room-card__name {
+  font-family: var(--font-sans);
+  font-size: var(--font-size-sans);
+  font-weight: 600;
+  color: var(--color-on-surface);
+}
+
+.room-card__article {
+  font-family: var(--font-sans);
+  font-size: var(--font-size-sans);
+  color: var(--color-on-surface-variant);
+}
