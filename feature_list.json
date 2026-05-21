@@ -39,7 +39,7 @@
     {
       "id": "FDM",
       "name": "Direct Messaging",
-      "status": "pending",
+      "status": "done",
       "description": "Users can send direct messages to other registered users. Conversation list shows all DM threads. Messages persist in localStorage.",
       "acceptance": [
         "DMs list shows all existing conversations",

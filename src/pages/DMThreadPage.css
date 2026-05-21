@@ -1,0 +1,77 @@
+.dm-thread-page {
+  display: flex;
+  flex-direction: column;
+  height: calc(100vh - 56px);
+  background-color: var(--color-surface);
+}
+
+.dm-thread-page__header {
+  padding: var(--space-md) var(--space-lg);
+  background-color: var(--color-surface-variant);
+  border-bottom: 1px solid var(--color-border);
+}
+
+.dm-thread-page__title {
+  font-family: var(--font-heading);
+  font-size: var(--font-size-heading);
+  font-weight: var(--font-weight-heading);
+  line-height: var(--line-height-heading);
+  color: var(--color-on-surface);
+  margin: 0;
+}
+
+.dm-thread-page__messages {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-sm);
+  padding: var(--space-md);
+  overflow-y: auto;
+  flex: 1;
+}
+
+.dm-message {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-xs);
+  max-width: 70%;
+}
+
+.dm-message--sent {
+  align-self: flex-end;
+  align-items: flex-end;
+}
+
+.dm-message--received {
+  align-self: flex-start;
+  align-items: flex-start;
+}
+
+.dm-message__author {
+  font-family: var(--font-sans);
+  font-size: var(--font-size-sans);
+  color: var(--color-on-surface-variant);
+  font-weight: 600;
+}
+
+.dm-message__bubble {
+  font-family: var(--font-sans);
+  font-size: var(--font-size-sans);
+  padding: var(--space-sm) var(--space-md);
+  border-radius: var(--rounded-lg);
+}
+
+.dm-message--sent .dm-message__bubble {
+  background-color: var(--color-chat-sent);
+  color: var(--color-on-chat-sent);
+}
+
+.dm-message--received .dm-message__bubble {
+  background-color: var(--color-chat-received);
+  color: var(--color-on-chat-received);
+}
+
+.dm-message__time {
+  font-family: var(--font-sans);
+  font-size: var(--font-size-mono);
+  color: var(--color-on-surface-variant);
+}

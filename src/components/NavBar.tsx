@@ -18,6 +18,12 @@ export function NavBar() {
       </Link>
       {user && (
         <div className="navbar__right">
+          <Link to="/rooms" className="navbar__nav-link">
+            Rooms
+          </Link>
+          <Link to="/dm" className="navbar__nav-link">
+            Messages
+          </Link>
           <span className="navbar__username">{user.username}</span>
           <button className="navbar__logout" onClick={handleLogout}>
             Logout

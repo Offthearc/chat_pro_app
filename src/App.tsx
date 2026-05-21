@@ -5,6 +5,8 @@ import { LoginPage } from './pages/LoginPage'
 import { RegisterPage } from './pages/RegisterPage'
 import { RoomsPage } from './pages/RoomsPage'
 import { RoomPage } from './pages/RoomPage'
+import { DMListPage } from './pages/DMListPage'
+import { DMThreadPage } from './pages/DMThreadPage'
 
 function App() {
   return (
@@ -27,6 +29,22 @@ function App() {
           element={
             <ProtectedRoute>
               <RoomPage />
+            </ProtectedRoute>
+          }
+        />
+        <Route
+          path="/dm"
+          element={
+            <ProtectedRoute>
+              <DMListPage />
+            </ProtectedRoute>
+          }
+        />
+        <Route
+          path="/dm/:conversationId"
+          element={
+            <ProtectedRoute>
+              <DMThreadPage />
             </ProtectedRoute>
           }
         />

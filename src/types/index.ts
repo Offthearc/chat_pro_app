@@ -37,3 +37,20 @@ export interface DMMessage {
   createdAt: string
   read: boolean
 }
+
+export interface DMConversation {
+  id: string
+  participantIds: [string, string]
+  participantUsernames: [string, string]
+  lastMessageAt: string
+  unreadCount: number
+}
+
+export interface DMMessageNew {
+  id: string
+  conversationId: string
+  senderId: string
+  senderUsername: string
+  content: string
+  createdAt: string
+}

@@ -3,9 +3,11 @@
 ## Files Created or Modified
 
 ### Created
+
 - `src/api/messages.ts` — New module containing `getMessages(roomId)` and `postMessage(roomId, author, content)`, both using localStorage key `chat_pro_app:messages:${roomId}`. Extracted directly from the former implementations in `src/api/rooms.ts`.
 
 ### Modified
+
 - `src/api/rooms.ts` — Removed `getMessages`, `postMessage`, `readMessages`, `writeMessages`, `MESSAGES_KEY_PREFIX`, and the `Message`/`User` imports. Now only exports `getRooms`, `getRoom`, and seed-on-first-load logic.
 - `src/hooks/useRoom.ts` — Updated import: `getMessages` and `postMessage` now come from `../api/messages`; `getRoom` still comes from `../api/rooms`.
 - `src/hooks/useRooms.ts` — Added `loading: boolean` to the `UseRoomsResult` interface and returns `{ rooms, loading: false }` from the hook body.

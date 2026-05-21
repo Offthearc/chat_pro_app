@@ -21,6 +21,17 @@
   gap: var(--space-md);
 }
 
+.navbar__nav-link {
+  color: var(--color-on-surface);
+  font-family: var(--font-sans);
+  font-size: var(--font-size-sans);
+  text-decoration: none;
+}
+
+.navbar__nav-link:hover {
+  color: var(--color-primary);
+}
+
 .navbar__username {
   color: var(--color-on-surface);
   font-family: var(--font-sans);
