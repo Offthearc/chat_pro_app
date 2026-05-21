@@ -53,8 +53,9 @@
     {
       "id": "FDEPLOY",
       "name": "Deploy to Vercel",
-      "status": "pending",
-      "verification": "vercel --prod returns a live https:// URL; URL reported to user"
+      "status": "done",
+      "verification": "vercel --prod returns a live https:// URL; URL reported to user",
+      "url": "https://chatproapp.vercel.app"
     }
   ]
 }
