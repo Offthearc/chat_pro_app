@@ -1,5 +1,5 @@
 import { Routes, Route, Navigate } from 'react-router-dom'
-import { AuthGuard } from './components/AuthGuard'
+import { ProtectedRoute } from './components/ProtectedRoute'
 import { NavBar } from './components/NavBar'
 import { LoginPage } from './pages/LoginPage'
 import { RegisterPage } from './pages/RegisterPage'
@@ -19,17 +19,17 @@ function App() {
         <Route
           path="/rooms"
           element={
-            <AuthGuard>
+            <ProtectedRoute>
               <PlaceholderRooms />
-            </AuthGuard>
+            </ProtectedRoute>
           }
         />
         <Route
           path="/rooms/:id"
           element={
-            <AuthGuard>
+            <ProtectedRoute>
               <PlaceholderRooms />
-            </AuthGuard>
+            </ProtectedRoute>
           }
         />
         <Route path="*" element={<Navigate to="/rooms" replace />} />

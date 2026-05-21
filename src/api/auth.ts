@@ -1,7 +1,7 @@
 import type { User } from '../types/index'
 
-const USERS_KEY = 'chat_pro_users'
-const CURRENT_USER_KEY = 'chat_pro_current_user'
+const USERS_KEY = 'chat_pro_app:users'
+const CURRENT_USER_KEY = 'chat_pro_app:currentUser'
 
 function readUsers(): User[] {
   try {
