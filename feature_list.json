@@ -1,0 +1,60 @@
+{
+  "project": "chat_pro_app",
+  "description": "A real-time chat platform where users register instantly, join article-linked discussion rooms, and message each other directly.",
+  "rules": {
+    "one_feature_at_a_time": true,
+    "require_tests_to_close": true,
+    "valid_status": ["pending", "in_progress", "done", "blocked"]
+  },
+  "features": [
+    {
+      "id": "FAUTH",
+      "name": "User Registration & Auth",
+      "status": "pending",
+      "description": "User registration and login without email confirmation. Users provide a username, email, and password. Auth state is persisted in localStorage. No backend — credentials stored client-side via a mock auth service in src/api/auth.ts.",
+      "acceptance": [
+        "Register form: username, email, password",
+        "Login form: email + password",
+        "No email confirmation step",
+        "Auth state survives page refresh (localStorage)",
+        "Logged-in users see their username in the nav",
+        "Logout clears state and redirects to login"
+      ],
+      "verification": "Tests cover register, login, logout, and persistence"
+    },
+    {
+      "id": "FCHAT",
+      "name": "Article-Linked Chat Rooms",
+      "status": "pending",
+      "description": "A list of chat rooms, each linked to an AI article (title + URL). Users browse rooms, open one, and post/read messages. Messages are persisted in localStorage per room.",
+      "acceptance": [
+        "Rooms list page shows room name + linked article title",
+        "Clicking a room opens the room view with article link and message thread",
+        "Authenticated users can post messages",
+        "Messages persist across page reloads (localStorage)",
+        "At least 5 seed rooms pre-loaded with AI article links"
+      ],
+      "verification": "Tests cover room listing, message posting, and persistence"
+    },
+    {
+      "id": "FDM",
+      "name": "Direct Messaging",
+      "status": "pending",
+      "description": "Users can send direct messages to other registered users. Conversation list shows all DM threads. Messages persist in localStorage.",
+      "acceptance": [
+        "DMs list shows all existing conversations",
+        "User can start a new conversation by selecting from registered users",
+        "Send and receive messages in a thread view",
+        "DM history persists across reloads (localStorage)",
+        "Unread indicator on conversations with new messages"
+      ],
+      "verification": "Tests cover DM thread creation, message sending, and persistence"
+    },
+    {
+      "id": "FDEPLOY",
+      "name": "Deploy to Vercel",
+      "status": "pending",
+      "verification": "vercel --prod returns a live https:// URL; URL reported to user"
+    }
+  ]
+}

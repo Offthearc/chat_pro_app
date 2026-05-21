@@ -1,0 +1,35 @@
+{
+  "project": "example-app",
+  "description": "Minimal React example used only as a format reference for feature_list.json.",
+  "rules": {
+    "one_feature_at_a_time": true,
+    "require_tests_to_close": true,
+    "valid_status": ["pending", "in_progress", "done", "blocked"]
+  },
+  "features": [
+    {
+      "id": 1,
+      "name": "button_component",
+      "title": "Reusable Button component",
+      "description": "A themeable button styled entirely from DESIGN.md tokens.",
+      "acceptance": [
+        "src/components/Button.tsx renders its children and calls an onClick handler",
+        "Styling uses the button-primary tokens (var(--color-primary), var(--color-on-primary), var(--rounded-md)) — no hardcoded values",
+        "tests/Button.test.tsx covers rendering the label and firing onClick"
+      ],
+      "status": "pending"
+    },
+    {
+      "id": 2,
+      "name": "counter_feature",
+      "title": "Counter with increment / decrement",
+      "description": "A small stateful feature demonstrating a hook + component split.",
+      "acceptance": [
+        "src/hooks/useCounter.ts exposes count, increment, and decrement",
+        "src/components/Counter.tsx renders the count and increment/decrement buttons",
+        "tests/Counter.test.tsx covers increment and decrement via user interaction"
+      ],
+      "status": "pending"
+    }
+  ]
+}

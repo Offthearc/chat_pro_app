@@ -1,0 +1,58 @@
+{
+  "$schema_comment": "Hooks automate verification and committing. The harness executes these — agents cannot skip them.",
+  "hooks": {
+    "PostToolUse": [
+      {
+        "matcher": "Edit|Write",
+        "hooks": [
+          {
+            "type": "command",
+            "command": "npx vitest run --passWithNoTests 2>&1 | tail -8",
+            "description": "After every file edit, run the test suite and show a summary."
+          },
+          {
+            "type": "command",
+            "command": "node scripts/design_check.mjs 2>&1 | tail -20 || true",
+            "description": "After every file edit, check DESIGN.md conformance (fast feedback; the hard gate is init.sh)."
+          },
+          {
+            "type": "command",
+            "command": "bash scripts/commit_on_done.sh 2>&1 || true",
+            "description": "If a feature just moved to done in feature_list.json, create a conventional commit. No-op otherwise. Never pushes."
+          }
+        ]
+      }
+    ],
+    "Stop": [
+      {
+        "hooks": [
+          {
+            "type": "command",
+            "command": "./init.sh > /tmp/harness_init.log 2>&1 && echo '[harness] init.sh OK' || (echo '[harness] init.sh FAILED — check /tmp/harness_init.log before closing' && cat /tmp/harness_init.log | tail -20)",
+            "description": "Before closing the session, force a full verification pass (includes the DESIGN.md gate)."
+          }
+        ]
+      }
+    ]
+  },
+  "permissions": {
+    "allow": [
+      "Bash(./init.sh)",
+      "Bash(npm install*)",
+      "Bash(npm ci*)",
+      "Bash(npm run*)",
+      "Bash(npx vitest*)",
+      "Bash(npx tsc*)",
+      "Bash(npx eslint*)",
+      "Bash(npx prettier*)",
+      "Bash(node scripts/*)",
+      "Bash(bash scripts/commit_on_done.sh*)",
+      "Bash(git add*)",
+      "Bash(git commit*)",
+      "Bash(git status*)",
+      "Bash(git diff*)",
+      "Bash(git show*)",
+      "Bash(git log*)"
+    ]
+  }
+}

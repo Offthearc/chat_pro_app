@@ -1,0 +1,38 @@
+/* AUTO-GENERATED from DESIGN.md by scripts/design_check.mjs. */
+/* Run `npm run design:tokens` to regenerate. Do not edit by hand. */
+:root {
+  /* colors */
+  --color-primary: #3B5BDB;
+  --color-on-primary: #FFFFFF;
+  --color-surface: #FFFFFF;
+  --color-on-surface: #1A1C1E;
+  --color-surface-variant: #F1F3F5;
+  --color-on-surface-variant: #5C5F66;
+  --color-border: #DEE2E6;
+  --color-danger: #E03131;
+  --color-success: #2F9E44;
+  /* typography */
+  --font-sans: Inter, system-ui, -apple-system, Segoe UI, Roboto, sans-serif;
+  --font-size-sans: 16px;
+  --font-weight-sans: 400;
+  --line-height-sans: 1.5;
+  --font-heading: Inter, system-ui, sans-serif;
+  --font-size-heading: 32px;
+  --font-weight-heading: 700;
+  --line-height-heading: 1.2;
+  --font-mono: ui-monospace, SFMono-Regular, Menlo, monospace;
+  --font-size-mono: 14px;
+  --font-weight-mono: 400;
+  --line-height-mono: 1.5;
+  /* rounded */
+  --rounded-sm: 4px;
+  --rounded-md: 8px;
+  --rounded-lg: 16px;
+  --rounded-full: 9999px;
+  /* spacing */
+  --space-xs: 4px;
+  --space-sm: 8px;
+  --space-md: 16px;
+  --space-lg: 24px;
+  --space-xl: 40px;
+}

@@ -1,0 +1,22 @@
+.app {
+  max-width: 42rem;
+  margin: 0 auto;
+  padding: var(--space-xl);
+  background-color: var(--color-surface);
+  color: var(--color-on-surface);
+  border-radius: var(--rounded-lg);
+}
+
+.app__title {
+  margin: 0 0 var(--space-md);
+  font-family: var(--font-heading);
+  font-size: var(--font-size-heading);
+  font-weight: var(--font-weight-heading);
+  line-height: var(--line-height-heading);
+  color: var(--color-primary);
+}
+
+.app__subtitle {
+  margin: 0;
+  color: var(--color-on-surface-variant);
+}
