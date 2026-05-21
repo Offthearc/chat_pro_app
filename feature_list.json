@@ -10,7 +10,7 @@
     {
       "id": "FAUTH",
       "name": "User Registration & Auth",
-      "status": "pending",
+      "status": "done",
       "description": "User registration and login without email confirmation. Users provide a username, email, and password. Auth state is persisted in localStorage. No backend — credentials stored client-side via a mock auth service in src/api/auth.ts.",
       "acceptance": [
         "Register form: username, email, password",

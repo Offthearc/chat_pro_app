@@ -1,14 +1,40 @@
-import './App.css'
+import { Routes, Route, Navigate } from 'react-router-dom'
+import { AuthGuard } from './components/AuthGuard'
+import { NavBar } from './components/NavBar'
+import { LoginPage } from './pages/LoginPage'
+import { RegisterPage } from './pages/RegisterPage'
+
+function PlaceholderRooms() {
+  return <main style={{ padding: 'var(--space-lg)' }}>Rooms coming soon</main>
+}
 
 function App() {
   return (
-    <main className="app">
-      <h1 className="app__title">Harness React</h1>
-      <p className="app__subtitle">
-        Multi-agent harness template. Define your scope in feature_list.json and
-        run the architect → designer → implementer → reviewer pipeline.
-      </p>
-    </main>
+    <>
+      <NavBar />
+      <Routes>
+        <Route path="/" element={<Navigate to="/rooms" replace />} />
+        <Route path="/login" element={<LoginPage />} />
+        <Route path="/register" element={<RegisterPage />} />
+        <Route
+          path="/rooms"
+          element={
+            <AuthGuard>
+              <PlaceholderRooms />
+            </AuthGuard>
+          }
+        />
+        <Route
+          path="/rooms/:id"
+          element={
+            <AuthGuard>
+              <PlaceholderRooms />
+            </AuthGuard>
+          }
+        />
+        <Route path="*" element={<Navigate to="/rooms" replace />} />
+      </Routes>
+    </>
   )
 }
 

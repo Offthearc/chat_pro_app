@@ -2,32 +2,43 @@
 /* Run `npm run design:tokens` to regenerate. Do not edit by hand. */
 :root {
   /* colors */
-  --color-primary: #3B5BDB;
+  --color-primary: #5865F2;
   --color-on-primary: #FFFFFF;
-  --color-surface: #FFFFFF;
-  --color-on-surface: #1A1C1E;
-  --color-surface-variant: #F1F3F5;
-  --color-on-surface-variant: #5C5F66;
-  --color-border: #DEE2E6;
-  --color-danger: #E03131;
-  --color-success: #2F9E44;
+  --color-primary-hover: #4752C4;
+  --color-surface: #1E1F22;
+  --color-on-surface: #DCDDDE;
+  --color-surface-variant: #2B2D31;
+  --color-on-surface-variant: #96989D;
+  --color-surface-elevated: #313338;
+  --color-border: #3F4147;
+  --color-danger: #ED4245;
+  --color-danger-hover: #C03537;
+  --color-success: #57F287;
+  --color-unread: #5865F2;
+  --color-chat-sent: #5865F2;
+  --color-on-chat-sent: #FFFFFF;
+  --color-chat-received: #313338;
+  --color-on-chat-received: #DCDDDE;
+  --color-badge: #ED4245;
+  --color-on-badge: #FFFFFF;
+  --color-link: #00AFF4;
   /* typography */
   --font-sans: Inter, system-ui, -apple-system, Segoe UI, Roboto, sans-serif;
-  --font-size-sans: 16px;
+  --font-size-sans: 15px;
   --font-weight-sans: 400;
   --line-height-sans: 1.5;
-  --font-heading: Inter, system-ui, sans-serif;
-  --font-size-heading: 32px;
+  --font-heading: Inter, system-ui, -apple-system, Segoe UI, Roboto, sans-serif;
+  --font-size-heading: 20px;
   --font-weight-heading: 700;
-  --line-height-heading: 1.2;
-  --font-mono: ui-monospace, SFMono-Regular, Menlo, monospace;
-  --font-size-mono: 14px;
+  --line-height-heading: 1.25;
+  --font-mono: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
+  --font-size-mono: 13px;
   --font-weight-mono: 400;
-  --line-height-mono: 1.5;
+  --line-height-mono: 1.6;
   /* rounded */
   --rounded-sm: 4px;
   --rounded-md: 8px;
-  --rounded-lg: 16px;
+  --rounded-lg: 12px;
   --rounded-full: 9999px;
   /* spacing */
   --space-xs: 4px;
