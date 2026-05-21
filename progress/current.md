@@ -1,10 +1,9 @@
-Feature in progress: FCHAT — Article-Linked Chat Rooms
+Feature in progress: FCHAT fix — Split messages API and add loading to useRooms
 
 Plan:
 
-- Create src/api/rooms.ts with getRooms, getRoom, getMessages, postMessage and seed data
-- Create src/hooks/useRooms.ts and src/hooks/useRoom.ts
-- Create src/components/RoomCard.tsx, MessageList.tsx, MessageInput.tsx
-- Create src/pages/RoomsPage.tsx and src/pages/RoomPage.tsx
-- Update src/App.tsx to use real RoomsPage and RoomPage components
-- Write tests/rooms.test.tsx covering all acceptance criteria
+- Create src/api/messages.ts with getMessages and postMessage functions
+- Remove getMessages and postMessage from src/api/rooms.ts
+- Update src/hooks/useRoom.ts to import from ../api/messages
+- Update tests/rooms.test.tsx to import getMessages and postMessage from ../api/messages
+- Add loading: boolean to useRooms return type and return { rooms, loading: false }

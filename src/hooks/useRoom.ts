@@ -1,10 +1,7 @@
 import { useState, useCallback } from 'react'
 import type { ChatRoom, Message, User } from '../types/index'
-import {
-  getRoom,
-  getMessages,
-  postMessage as apiPostMessage,
-} from '../api/rooms'
+import { getRoom } from '../api/rooms'
+import { getMessages, postMessage as apiPostMessage } from '../api/messages'
 
 interface UseRoomResult {
   room: ChatRoom | null
